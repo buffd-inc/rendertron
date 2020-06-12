@@ -22,6 +22,8 @@ Rendertron is compatible with all client side technologies, including [web compo
 
 Rendertron is deployed to the heroku `juked-rendertron` app whenever a commit is merged to production. The `app.yaml` file is no longer necessary.
 
+NOTE: The default Google App Engine configuration was causing cold start delays for standard env auto-scaling instances. This is a problem for googlebot, because we already have a slow page load time with firebase streaming. Switching to flex environment also had some setup issues, so opted to host in heroku which should be cheaper for the 100% availability (no warm up delay) use case.
+
 ## Contents
 
 - [Middleware](#middleware)
