@@ -16,10 +16,11 @@ and serializes the response back to the original request. To use Rendertron, you
 configures [middleware](#middleware) to determine whether to proxy a request to Rendertron.
 Rendertron is compatible with all client side technologies, including [web components](#web-components).
 
-**Demo endpoint**
+## Juked
 
-A demo Rendertron service is available at https://render-tron.appspot.com/. It is not designed
-to be used as a production endpoint. You can use it, but there are no uptime guarantees.
+### Deploying to Heroku
+
+Rendertron is deployed to the heroku `juked-rendertron` app whenever a commit is merged to production. The `app.yaml` file is no longer necessary.
 
 ## Contents
 
@@ -181,12 +182,6 @@ With a local instance of Chrome installed, you can start the server locally:
 
 ```bash
 npm run start
-```
-
-### Deploying to Google Cloud Platform
-
-```
-gcloud app deploy app.yaml --project juked-d5e67
 ```
 
 ### Deploying using Docker
